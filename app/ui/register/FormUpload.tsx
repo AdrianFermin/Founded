@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { FaPlus } from "react-icons/fa6";
-import { Modal, Upload } from 'antd';
+import { Modal, Upload, message } from 'antd';
 import type { GetProp, UploadFile, UploadProps } from 'antd';
 
 type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0];
@@ -44,10 +44,19 @@ const FormUpload = ({fileList, setFileList}: {fileList:UploadFile[], setFileList
         setFileList(newFileList);
     }
 
+    const beforeUploadFn = (file: any) => {
+        const fileType = file.type;
+        if(fileType != 'image/jpeg' && fileType != 'image/png'){
+            message.error(`El archivo seleccionado no es una imagen .JPEG o .PNG`);
+            return Upload.LIST_IGNORE;
+        }
+    }
+
     return(
         <>
             <div className=''>
                 <Upload
+                beforeUpload={(file) => beforeUploadFn(file)}
                 maxCount={3}
                 listType="picture-card"
                 fileList={fileList}

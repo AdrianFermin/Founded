@@ -241,7 +241,7 @@ const EmpresasForm = ({empresa, locations, categorias, imagenes} : {imagenes:any
                     </div>
                     <div className='mx-4 mt-4'>
                         <FormUpload fileList={fileList} setFileList={setFileList}></FormUpload>
-                        <p className="text-gray-500 text-xs ms-1 flex"><IoIosInformationCircle className="mt-0.5 me-0.5"/>Minimo: 1, Maximo: 3</p>
+                        <p className="text-gray-500 text-xs ms-1 flex"><IoIosInformationCircle className="mt-0.5 me-0.5"/>Minimo: 1, Maximo: 3. Los archivos deben ser .JPG, .JPEG o .PNG</p>
                     </div>
                     <div className="place-items-center items-center text-center mb-5 mt-3 font-semibold">
                         <button onClick={handleSubmit} className="rounded-xl bg-black text-white text-lg hover:bg-green-800 me-5">
