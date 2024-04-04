@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FaPlus } from "react-icons/fa6";
 import { Modal, Upload, message } from 'antd';
 import type { GetProp, UploadFile, UploadProps } from 'antd';
+import { usePathname } from 'next/navigation';
 
 type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0];
 
@@ -19,6 +20,7 @@ const FormUpload = ({fileList, setFileList}: {fileList:UploadFile[], setFileList
     const [previewOpen, setPreviewOpen] = useState(false);
     const [previewImage, setPreviewImage] = useState('');
     const [previewTitle, setPreviewTitle] = useState('');
+    const pathname = usePathname();
 
     const uploadButton = (
         <div>
@@ -37,7 +39,11 @@ const FormUpload = ({fileList, setFileList}: {fileList:UploadFile[], setFileList
     }
     setPreviewImage(file.url || (file.preview as string));
     setPreviewOpen(true);
-    setPreviewTitle(file.name || file.url!.substring(file.url!.lastIndexOf('/') + 1));
+    if(pathname != '/edit'){
+        setPreviewTitle(file.name || file.url!.substring(file.url!.lastIndexOf('/') + 1));
+    } else {
+        setPreviewTitle('')
+    }
     };
     
     const handleChange: UploadProps['onChange'] = ({ fileList: newFileList }) => {
