@@ -197,7 +197,7 @@ export function SearchInput({textColor, location, categorias, locations} :
                 <legend className="mb-4">Buscar por:</legend>
                   <div className='flex gap-4'>
                     <div className="flex items-center gap-1">
-                      <Radio checked={searchFor == 'Empresas' ? true : false} onChange={(e) => setSearchFor(e.target.value)} id="empresa" name="filter-1" value="Nombres" />
+                      <Radio checked={searchFor == 'Empresas' ? true : false} onChange={(e) => setSearchFor(e.target.value)} id="empresa" name="filter-1" value="Empresas" />
                       <Label htmlFor="empresa">Empresas</Label>
                     </div>
                     <div className="flex items-center gap-1">

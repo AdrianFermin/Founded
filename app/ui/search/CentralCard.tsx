@@ -126,7 +126,7 @@ const CentralCard = ({empresa, ratings, images} : {empresa: Empresa, ratings: Ra
                             <FaInstagramSquare/>
                             <h4 className="font-semibold text-xl ms-1 mt-1">
                                 <RenderIf render={empresa.instagram != ''}>
-                                    <Link className="hover:underline" href={`${empresa?.instagram}`}>{empresa.name}</Link>
+                                    <Link className="hover:underline" href={`${empresa?.instagram}`} target="_blank">{empresa.name}</Link>
                                 </RenderIf>
                                 <RenderIf render={empresa.instagram == ''}>
                                     -
@@ -137,7 +137,7 @@ const CentralCard = ({empresa, ratings, images} : {empresa: Empresa, ratings: Ra
                             <FaFacebookSquare/>
                             <h4 className="font-semibold text-xl ms-1 mt-1">
                                 <RenderIf render={empresa.facebook != ''}>
-                                    <Link className="hover:underline" href={`${empresa?.facebook}`}>{empresa.name}</Link>
+                                    <Link className="hover:underline" href={`${empresa?.facebook}`} target="_blank">{empresa.name}</Link>
                                 </RenderIf>
                                 <RenderIf render={empresa.facebook == ''}>
                                     -

@@ -15,6 +15,7 @@ export default function Foooter() {
               src="/logoNegro.png"
               alt="Founded Logo"
               className='text-red-500'
+              target="_blank"
             />
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
@@ -22,14 +23,14 @@ export default function Foooter() {
             <div>
               <Footer.Title title="about" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Documentacion</Footer.Link>
-                <Footer.Link href="#">Equipo</Footer.Link>
+                <Footer.Link href="#" target="_blank">Documentacion</Footer.Link>
+                <Footer.Link href="#" target="_blank">Equipo</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup col>
-                <Footer.Link href="https://github.com/AdrianFermin?tab=repositories">Github</Footer.Link>
+                <Footer.Link href="https://github.com/AdrianFermin?tab=repositories" target="_blank">Github</Footer.Link>
               </Footer.LinkGroup>
             </div>
             
@@ -39,7 +40,7 @@ export default function Foooter() {
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright href="/" by="Founded" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="https://github.com/AdrianFermin?tab=repositories" icon={BsGithub} />
+            <Footer.Icon href="https://github.com/AdrianFermin/Founded" icon={BsGithub} target="_blank"/>
           </div>
         </div>
       </div>
