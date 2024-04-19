@@ -23,14 +23,14 @@ export default function Foooter() {
             <div>
               <Footer.Title title="about" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#" target="_blank">Documentacion</Footer.Link>
+                <Footer.Link href="https://docs.google.com/document/d/1BtHGAK0jolOmTzTqTG38KGLWqzmVqwyB/edit?usp=sharing&ouid=113384998862679000045&rtpof=true&sd=true" target="_blank">Documentacion</Footer.Link>
                 <Footer.Link href="#" target="_blank">Equipo</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup col>
-                <Footer.Link href="https://github.com/AdrianFermin?tab=repositories" target="_blank">Github</Footer.Link>
+                <Footer.Link href="https://github.com/AdrianFermin/Founded" target="_blank">Github</Footer.Link>
               </Footer.LinkGroup>
             </div>
             

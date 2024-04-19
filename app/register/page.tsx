@@ -8,7 +8,7 @@ export default async function registerPage(){
 
     return(
         <>
-            <EmpresasForm categorias={categorias} locations={locations}></EmpresasForm>
+            <EmpresasForm imagenes={[]} categorias={categorias} locations={locations}></EmpresasForm>
         </>
     )
 }
